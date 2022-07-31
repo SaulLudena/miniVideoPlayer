@@ -6,21 +6,21 @@ const metodoMostrarEnlace = async() =>{
 	container.innerHTML= ""
 	const fetchSongs = await fetch(BASE_URL_TADB_TRACKS)
 	const data = await fetchSongs.json()
-	console.log(data.mvids[0].strTrack)
 	for(var i=0;i<data.mvids.length;i++){
 		const button = document.createElement("button")
-		button.innerHTML=`${i+1} ${data.mvids[i].strMusicVid}`
+		button.innerHTML=`${i+1} | ${data.mvids[i].strTrack}`
 		button.classList.add("disable")
 		function reproducir(index){
 			button.addEventListener("click",function(){
 				const youTubeVideoCode = data.mvids[index].strMusicVid.substr(data.mvids[index].strMusicVid.length - 11)
 				const youtubeVideo = data.mvids[index].strMusicVid
 				const youtubeUrlEmbed = `https://www.youtube.com/embed/${youTubeVideoCode}`
+				const nameTrack=data.mvids[index].strTrack
 				console.log(`reproduciendo ${youtubeUrlEmbed}`)
-				videoContainer.innerHTML=`<h1>Reproduciendo ${index+1} <a href="${youtubeVideo} " target="_blank">${data.mvids[index].strTrack}</a></h1><br>
+				videoContainer.innerHTML=`<h1>Reproduciendo ${index+1} <a href="${youtubeVideo} " target="_blank">${nameTrack}</a></h1><br>
 								
 										<iframe width="420" height="315"
-										src="${youtubeUrlEmbed}?autoplay=1&mute=1" frameborder=”0″>
+										src="${youtubeUrlEmbed}?autoplay=1" allow='autoplay' frameborder=”0″>
 										</iframe>`
 			})
 		}
