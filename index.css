@@ -1,0 +1,66 @@
+body {
+  background-color: #242424;
+  display: -ms-grid;
+  display: grid;
+  margin: auto;
+  -ms-grid-columns: 30% auto;
+      grid-template-columns: 30% auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+  padding: 0;
+}
+
+#container .disable {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #242424;
+  color: #DDDDDD;
+  border-radius: 0.5rem;
+}
+
+#container button:focus {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #08080877;
+  color: #DDDDDD;
+  border-radius: 0.5rem;
+}
+
+#container button:hover {
+  background-color: #08080877;
+  color: #DDDDDD;
+}
+
+#videoContainer {
+  color: #DDDDDD;
+  padding: 3rem;
+}
+
+#videoContainer h1 a {
+  color: white;
+}
+
+#videoContainer iframe {
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 1px 1px 20px #000000a1;
+          box-shadow: 1px 1px 20px #000000a1;
+}
+/*# sourceMappingURL=index.css.map */
